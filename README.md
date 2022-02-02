@@ -65,9 +65,11 @@ Since we set the simulation frequency 50 MHz, there would be two clock cycles in
 #### Simulation result when Vin = 48.4375MHz
 ![Simulation result when Vin = 48.4375MHz](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/05abb1c490a0ee53c33b7780ede29dda0a686ec9/14.PNG)
 
-#### Gray Encoder Table
-![GET]()
+### FFT Simulation
 
-#### Gray Encoder Table
-![GET]()
+#### Fs = 40.625MHz, ENOB=4.6598 bits, SNDR= 29.81dB
+![F1](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/0d9eba61e20c7d268713dadc0f9ca207efeb9107/16.PNG)
+
+#### Fs = 45.3MHz, ENOB=5.9128 bits, SNDR= 37.35 dB
+![F2](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/0d9eba61e20c7d268713dadc0f9ca207efeb9107/16.PNG)
 
