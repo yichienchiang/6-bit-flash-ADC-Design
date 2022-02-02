@@ -42,18 +42,32 @@ The completion detector circuit is for ensuring valid output for unresolved inpu
 #### Simulation results of comparator and completion detection circuit
 ![Simulation results of comparator and completion detection circuit](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/69a6153d9f7088c3379c66fb6a9cb519777054a9/7.PNG)
 
-#### T&H Circuit scematic
-![T&H Circuit scematic]()
+### Gray Encoder
+Utilizing gray code instead of the traditional binary, has some advantages for the design. The most important is that the transition between two consecutive values for gray code would change only a single bit at a time. This makes it easier to avoid metastability, because we never have more than one bit changing at a time. 
 
-#### T&H Circuit scematic
-![T&H Circuit scematic]()
+#### Gray Encoder Schematic
+![GES](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/0077937897ced309b3933acc96c36870afa538ff/8.PNG)
 
-#### T&H Circuit scematic
-![T&H Circuit scematic]()
+#### Gray Encoder Schematic detail 
+![GESD](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/0077937897ced309b3933acc96c36870afa538ff/9.PNG)
 
+#### Gray Encoder Simulation
+![GESim](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/0077937897ced309b3933acc96c36870afa538ff/10.PNG)
 
+#### Gray Encoder Table
+![GET](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/05abb1c490a0ee53c33b7780ede29dda0a686ec9/11.PNG)
 
+Since we set the simulation frequency 50 MHz, there would be two clock cycles in a sine wave input period. Therefore, the hold mode of T/H circuit will catch the same two results in a sine period. In other words, if we set the frequency to a non-whole number (For example, 48.4375MHz), the hold mode will catch different values. Basically, at 50 MHz, due to the hold mode catching the same two results every time, the final output of the encoder will have two results in a period.
 
+#### Simulation results of ADC with track-and-hold circuit with Vin = 50 MHz
+![Simulation results of ADC with track-and-hold circuit with Vin = 50 MHz](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/05abb1c490a0ee53c33b7780ede29dda0a686ec9/13.PNG)
 
+#### Simulation result when Vin = 48.4375MHz
+![Simulation result when Vin = 48.4375MHz](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/05abb1c490a0ee53c33b7780ede29dda0a686ec9/14.PNG)
 
+#### Gray Encoder Table
+![GET]()
+
+#### Gray Encoder Table
+![GET]()
 
