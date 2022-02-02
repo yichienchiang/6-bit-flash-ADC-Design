@@ -29,11 +29,30 @@ This comparator design reduces power consumption with a cross-coupled mechanism 
 
 The effect of the amplification stage is that node intN discharges at a reduced rate. As intP and intN decrease in voltage, internal nodes N1and P1 increase. The comparator’s timing behavior ensures that the intP and intN stop discharging at levels Vd1 and Vd2, below Vdd. This proposed scheme saves substantial area at the cost of some added noise. The component gets the input signals from the track-and-hold circuit and resistor ladder. After receiving the signals, the comparator will do the comparison.
 
-#### Comparator
+#### Comparator Schematic
 ![Comparator](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/69a6153d9f7088c3379c66fb6a9cb519777054a9/5.PNG)
+
+### Completion detector
+
+The completion detector circuit is for ensuring valid output for unresolved input. When the comparator is in the metastable state, the circuit holds the Vout and Vout_bar high in the original design. After the input voltages separate by more than one threshold voltage, one of the outputs is pulled low by the input. In contrast to a simple gain stage, the circuit guarantees at least one valid output. The circuit operates over a wide range of common-mode input voltages and does not require a clock signal. To connect to the 64-input gray encoder, we chose to use only one output, Vout, to prevent the metastable state and keep the same function of the circuit.
+
+#### Completion detector Schematic
+![CDS](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/69a6153d9f7088c3379c66fb6a9cb519777054a9/6.PNG)
+
+#### Simulation results of comparator and completion detection circuit
+![Simulation results of comparator and completion detection circuit](https://github.com/yichienchiang/6-bit-flash-ADC-Design/blob/69a6153d9f7088c3379c66fb6a9cb519777054a9/7.PNG)
 
 #### T&H Circuit scematic
 ![T&H Circuit scematic]()
+
+#### T&H Circuit scematic
+![T&H Circuit scematic]()
+
+#### T&H Circuit scematic
+![T&H Circuit scematic]()
+
+
+
 
 
 
